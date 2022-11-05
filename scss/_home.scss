@@ -1,0 +1,286 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    border-bottom: 1px solid white;
+    img {
+        width: 30px;
+    }
+
+    .logo a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        transform: rotate(-3deg);
+        img{
+            width: 30px;
+            
+        }
+        span{
+            font-size: 25px;
+            color: $mainColor;
+            font-weight: 700;
+            font-family: 'Lobster', cursive;
+            
+        }
+    }
+    .logo:hover img{
+        animation: linear heart 3s infinite;
+    }
+    nav{
+        
+        a:last-child{
+            padding: 10px 30px;
+            border: 1px solid  $mainColor;
+            border-radius: 6px;
+            margin: 0 10px;
+
+        }
+        a{
+            margin: 0 20px 0 0;
+            color: $mainColor;
+            font-weight: 700;
+            transition: .3s;
+        }
+        a:last-child:hover{
+            background-color: $mainColor;
+            color: white;
+        }
+    }
+}
+
+.hero {
+    height: calc(100vh - 88px);
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0  0 0 200px;
+    &__image{
+        > img{
+           position: absolute;
+            bottom: 250px;
+            right: 0;
+            width:600px;
+            height: 60%;
+            flex: 1;
+            
+            border-radius: 50%;
+        }
+        .icons{
+            img{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                position: absolute;
+                right: 500px;
+                animation: spin 8s infinite linear;
+                transition: .5s forwards;
+            }
+            img:hover{
+               opacity: 90%;
+            }
+            img:nth-child(2){
+                animation: linear heart 1.5s infinite;
+                top: 600px;
+                right: 250px;
+                border-radius: 50%;
+            }            
+            img:nth-child(3){
+                animation: linear vibrate 1.5s infinite;
+                top: 400px;
+                right: 450px;
+                border-radius: 50%;
+            }            
+            img:nth-child(4){
+                animation: linear toTop .9s infinite;
+                top: 400px;
+                right: 30px;
+                border-radius: 50%;
+            }            
+            img:nth-child(5){
+                animation: linear vibrate 1.5s infinite;
+                top: 40500px0px;
+                right: 30px;
+                border-radius: 50%;
+            }            
+        }
+    }
+    &__info {
+        text-align: center;
+        button{
+            cursor: pointer;
+            padding: 20px 30px;
+            border: none;
+            background-color: white;
+            border-radius: 15px;
+            font-size: 18px;
+            font-weight: 700;
+            transition: .3s;
+            color: $heroColor;
+        }
+        h1{
+            margin-bottom: 50px;
+            color: $heroColor;
+        }
+        h1::after{
+            content: " :)";
+            color:white ;
+        }
+        p{
+            font-size: 20px;
+            color: white;
+            font-weight:400 ;
+            letter-spacing: 3px;
+            margin-bottom: 50px;
+        }
+        > button {
+            background-color: $heroColor;
+            color: white;
+        }
+        > button:hover{
+            opacity: 90%;
+        }
+        button:first-child{
+            margin-left: 10px;
+        }
+        button:first-child:hover{
+            background-color: $heroColor;
+            color: white;
+        }
+       
+    }
+}
+#myVideo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
+.overlay, .contact__overlay{
+    position: fixed;
+    background-image: $blackGradient;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.contact {
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translateX(-50%) scale(0);
+    transition: 200ms ease-in-out;
+    width: 600px;
+    max-width: 80%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 15px;
+    z-index: 11;
+    background-image: white;
+    border: 1px solid $mainColor;
+    &__info {
+        h3 {
+            color: $mainColor;
+        }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid $mainColor;
+        padding-bottom: 15px;
+
+        > button {
+            cursor: pointer;
+            border: none;
+            outline: none;
+            font-weight: 700;
+            background: none;
+            font-size: 20px;
+        
+        }
+    }
+    &__overlay {
+        z-index: 10;
+        transition: 200ms ease-in-out;
+        opacity: 0;
+        pointer-events: none;
+    }
+    &.active {
+        transform: translateX(-50%) scale(1);
+    }
+    &__overlay.active {
+        opacity: 1;
+        pointer-events: all;
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+        grid-area: 15px;
+        padding: 30px 0;
+        >button {
+        
+            cursor: pointer;
+            padding: 15px 30px;
+            border: none;
+            background-color: $heroColor;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 700;
+            transition: .3s;
+            color: white;
+            
+            
+        }
+        label {
+            color: $mainColor;
+            font-size: 700;
+        }
+        input, textarea {
+            width:calc(100% - 50px);
+            padding: 15px 20px;
+            margin: 15px 0;
+            border-radius: 5px;
+            outline: none;
+            border: 1px solid $mainColor;
+            resize: none;
+            background-color: #f8f8f8;
+        }
+        .social{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            a{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                img {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+            span {
+                font-weight: 700;
+                font-family: 'Lobster', cursive;
+                letter-spacing: 1px;
+                color: $heroColor;
+            }
+            a:hover{
+                opacity: 80%;
+            }
+        }
+    }
+
+}

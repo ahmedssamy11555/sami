@@ -1,0 +1,81 @@
+.projects {
+    h1,h2 {
+        text-align: center;
+        margin: 30px auto;
+        color: $mainColor;
+        border-bottom: 10px;
+        width: fit-content;
+        color: white;
+        background-color: #1182A4;
+        padding: 5px;
+        transform: rotate(-2deg);
+        border-radius: 5px;
+    }
+    &__container{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+        gap: 30px;
+        .project {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            img{
+                    width: 100%;
+                    display: block;
+                    border-radius: 10px;
+                    opacity: .9;
+                    height: 100%;
+                }
+        
+            &__overlay {
+                transition: 300ms ease-in-out;
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                width: 50%;
+                height: 100%;
+                background-image: $blackGradient;
+                border-radius: 10px ;
+                opacity: .9;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 30px;
+                pointer-events: all;
+            }
+            &__info {
+                color: white;
+            }
+        h3{
+            color:white;
+            text-align:center;
+            font-size: 14px;
+            border-bottom: 1px solid $mainColor;
+        }
+        &__tools {
+            display: flex;
+            gap: 10px;
+            span {
+                padding: 5px 10px;
+                color: white;
+                text-align: center;
+                border-radius: 40px;
+                flex-wrap: wrap;
+                
+            }
+            color: $mainColor;
+        }
+            
+        }
+    
+    .project:hover .project__overlay {
+        opacity: 1;
+        width: 100%;
+    }
+    }
+}
+

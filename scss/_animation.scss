@@ -1,0 +1,45 @@
+@keyframes spin {
+    from { 
+      -webkit-transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(-360deg);
+    }
+  }
+
+
+@keyframes vibrate {
+    0%{transform:translate3d(1px,2px,0) scale3d(1.05,1.05,1)}
+    25%{transform:translate3d(2px,-1px,0) scale3d(.95,.95,1)}
+    50%{transform:translate3d(-1px,2px,0) scale3d(1.05,1.05,1)}
+    75%{transform:translate3d(2px,-1px,0) scale3d(.9,.9,1)}
+  };
+
+
+  @keyframes heart {
+    0%{transform:scale3d(1,1,1)}
+    7%{transform:scale3d(.95,.95,1)}
+    10%{transform:scale3d(1.225,1.225,1)}
+    15%{transform:scale3d(1,1,1)}
+    17%{transform:scale3d(.90,.90,1)}
+    20%{transform:scale3d(1,1,1)}
+  }
+
+@keyframes compass {
+    50%{transform:rotate3d(0,0,1,-90deg)}
+  }
+
+@keyframes rotation {
+    87%{transform:rotate3d(0,0,1,-360deg)}
+    100%{transform:rotate3d(0,0,1,-360deg)}
+  }
+
+@keyframes toTop {
+    from{
+        margin: 0;
+    }
+    to {
+        margin: 5px;
+    }
+
+  }

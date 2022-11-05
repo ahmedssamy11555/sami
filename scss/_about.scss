@@ -1,0 +1,68 @@
+
+.about_header{
+    border-bottom: 1px solid #1182A4;
+}
+.about {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    &__info{
+        h1, h2{
+            margin: 50px 0 50px;
+            width: fit-content;
+            color: white;
+            background-color: #1182A4;
+            padding: 5px;
+            transform: rotate(-5deg);
+        }
+        p{
+            width: 50%;
+            color: gray;
+            line-height: 1.8;
+            font-weight: 400;
+            
+        }
+    }
+    &__image img{
+        width: 400px;
+        max-height: 100vh;
+        flex: 1;
+        border-radius: 50%;
+        
+    }
+    &__image:hover {
+        opacity: .95;
+        margin-bottom: 10px;
+    }
+    small{
+        display: block;
+        margin-bottom: 25px;
+        font-weight: 700;
+        color: #1182A4;
+
+    }
+}
+.about__skills{
+    display: flex;
+    flex: 1;
+    gap: 10px;
+    width: fit-content;
+    border: 1px solid #1182A4;
+    border-radius: 10px;
+    padding: 5px;
+    &__card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+       
+        span{
+            color: gray;
+            padding-top: 15px;
+            font-weight: 400;
+        }
+       
+        
+    }
+}

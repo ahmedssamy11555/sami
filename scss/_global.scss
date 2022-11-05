@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 25px 200px;
+    
+}
+
+a ,a::before, a::after {
+    text-decoration: none;
+}
+body{
+    box-sizing: border-box;
+    font-family: 'Bitter', serif;
+    background-image: $globalGradient;
+}
+
+.icon{
+    width: 30px;
+    height: 30px;
+    margin: 25px ;
+}
+.clicked{
+    color: red;
+}
+
+.button {
+        cursor: pointer;
+            padding: 10px 10px;
+            border: none;
+            background-color: $mainColor;
+            border-radius: 40px;
+            font-size: 18px;
+            font-weight: 700;
+            transition: .3s;
+            color: white;
+}
+
+.html {
+    background-color: #e34f26;
+}
+.js {
+    background-color: #f7df1e;
+}
+
+.css {
+    background-color: #264de4;
+}
+
+.sass {
+    background-color: #CD669A;
+}
+
