@@ -1,4 +1,7 @@
 .projects {
+    @include breakpoint-down(small){
+        padding: 0 5px !important;
+    }
     h1,h2 {
         text-align: center;
         margin: 30px auto;
@@ -13,16 +16,17 @@
     }
     &__container{
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
         gap: 30px;
         .project {
+            
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             position: relative;
             img{
-                    width: 100%;
+                    max-width: 100%;
                     display: block;
                     border-radius: 10px;
                     opacity: .9;
@@ -35,7 +39,7 @@
                 left: 0;
                 top: 0;
                 bottom: 0;
-                width: 50%;
+                width: 60%;
                 height: 100%;
                 background-image: $blackGradient;
                 border-radius: 10px ;
@@ -46,9 +50,21 @@
                 flex-direction: column;
                 gap: 30px;
                 pointer-events: all;
+                @include breakpoint-down(small){
+                    gap: 15px;
+                    .button {
+                        font-size: 12px;
+                        padding: 5px !important;
+                    }
+                }
             }
             &__info {
                 color: white;
+                @include breakpoint-down(small){
+                    h2 {
+                        margin: 15px auto;
+                    }
+                }
             }
         h3{
             color:white;
@@ -58,16 +74,19 @@
         }
         &__tools {
             display: flex;
-            gap: 10px;
+            gap: 5px;
+            color: $mainColor;
             span {
                 padding: 5px 10px;
                 color: white;
                 text-align: center;
                 border-radius: 40px;
                 flex-wrap: wrap;
-                
+                @include breakpoint-down(small){
+                    padding: 2px 4px;
+                }
             }
-            color: $mainColor;
+          
         }
             
         }

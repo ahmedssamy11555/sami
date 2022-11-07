@@ -75,6 +75,8 @@
     padding: 5px;
     @include breakpoint-down(small){
         gap: 5px;
+        flex-direction: column;
+        width: 70%;
     }
     &__card{
         display: flex;
@@ -84,12 +86,17 @@
         flex-direction: column;
         @include breakpoint-down(small){
             flex-direction: column;
+            &:not(:last-child) {
+                border-bottom: 0.1px solid $mainColor;
+
+            }
         }
-       
+        
         span{
             color: gray;
-            padding-top: 15px;
+            padding-top: 10px;
             font-weight: 400;
+            padding-bottom: 10px;
             
         }
        

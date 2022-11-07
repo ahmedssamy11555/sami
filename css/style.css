@@ -436,6 +436,8 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
@@ -449,8 +451,6 @@ a, a::before, a::after {
 body {
   font-family: "Bitter", serif;
   background-image: linear-gradient(to right, #F5F7FA, #B8C6DB);
-  margin: 0;
-  padding: 0;
 }
 
 .icon {
@@ -661,6 +661,8 @@ nav a[aria-current=page] {
 @media (max-width: 39.9375em) {
   .about__skills {
     gap: 5px;
+    flex-direction: column;
+    width: 70%;
   }
 }
 .about__skills__card {
@@ -674,13 +676,22 @@ nav a[aria-current=page] {
   .about__skills__card {
     flex-direction: column;
   }
+  .about__skills__card:not(:last-child) {
+    border-bottom: 0.1px solid #1182A4;
+  }
 }
 .about__skills__card span {
   color: gray;
-  padding-top: 15px;
+  padding-top: 10px;
   font-weight: 400;
+  padding-bottom: 10px;
 }
 
+@media (max-width: 39.9375em) {
+  .projects {
+    padding: 0 5px !important;
+  }
+}
 .projects h1, .projects h2 {
   text-align: center;
   margin: 30px auto;
@@ -695,7 +706,7 @@ nav a[aria-current=page] {
 }
 .projects__container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 30px;
 }
 .projects__container .project {
@@ -706,7 +717,7 @@ nav a[aria-current=page] {
   position: relative;
 }
 .projects__container .project img {
-  width: 100%;
+  max-width: 100%;
   display: block;
   border-radius: 10px;
   opacity: 0.9;
@@ -718,7 +729,7 @@ nav a[aria-current=page] {
   left: 0;
   top: 0;
   bottom: 0;
-  width: 50%;
+  width: 60%;
   height: 100%;
   background-image: linear-gradient(to left, rgba(44, 62, 80, 0.9), #000000);
   border-radius: 10px;
@@ -730,8 +741,22 @@ nav a[aria-current=page] {
   gap: 30px;
   pointer-events: all;
 }
+@media (max-width: 39.9375em) {
+  .projects__container .project__overlay {
+    gap: 15px;
+  }
+  .projects__container .project__overlay .button {
+    font-size: 12px;
+    padding: 5px !important;
+  }
+}
 .projects__container .project__info {
   color: white;
+}
+@media (max-width: 39.9375em) {
+  .projects__container .project__info h2 {
+    margin: 15px auto;
+  }
 }
 .projects__container .project h3 {
   color: white;
@@ -741,7 +766,7 @@ nav a[aria-current=page] {
 }
 .projects__container .project__tools {
   display: flex;
-  gap: 10px;
+  gap: 5px;
   color: #1182A4;
 }
 .projects__container .project__tools span {
@@ -750,6 +775,11 @@ nav a[aria-current=page] {
   text-align: center;
   border-radius: 40px;
   flex-wrap: wrap;
+}
+@media (max-width: 39.9375em) {
+  .projects__container .project__tools span {
+    padding: 2px 4px;
+  }
 }
 .projects__container .project:hover .project__overlay {
   opacity: 1;
