@@ -16,6 +16,12 @@ closeBtns.forEach(button => {
         closeFrom(form); 
     })
 })
+closeBtns.forEach(button => {
+    button.addEventListener('click', () => {
+        const form = button.closest('.navbar')
+        closeFrom(form); 
+    })
+})
 
 contactOverlay.addEventListener('click', () => {
     const forms = document.querySelectorAll(".contact.active")

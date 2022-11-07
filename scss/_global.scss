@@ -1,6 +1,5 @@
 *{
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box;
 }
 
 .container {
@@ -12,9 +11,10 @@ a ,a::before, a::after {
     text-decoration: none;
 }
 body{
-    box-sizing: border-box;
     font-family: 'Bitter', serif;
     background-image: $globalGradient;
+    margin: 0;
+    padding: 0;
 }
 
 .icon{
@@ -53,3 +53,13 @@ body{
     background-color: #CD669A;
 }
 
+.hide-mobile {
+    @include breakpoint-down(medium){
+        display: none;
+    }
+}
+.hide-desktop {
+    @include breakpoint-up(large){
+        display: none;
+    }
+}

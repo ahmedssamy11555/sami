@@ -20,29 +20,35 @@
                 <span>Sami</span>
             </a>
         </div>
-        <nav>
+        <nav class="navbar">
+            <div class="hide-desktop">
+                <button data-close-btn>&times;</button>
+            </div>
             <a href="/">Home</a>
             <a href="/pages/about.html">About</a>
             <a href="./pages/protfolio.html">Portfolio</a>
         </nav>
+        <img data-close-btn data-target-form=".navbar" class="hide-desktop" src="./images/icon-hamburger.svg" alt="">
     </header>
 
     <main class="hero">
-        <div class="hero__info">
-            <h1>Hi, There</h1>
-            <p>Nice To See you Here</p>
-            <button data-target-form=".contact">Need A New website ?</button>
-            <a href="./pages/protfolio.html"><button>See Recent Projects?</button></a>
-            
-        </div>
-        <div class="hero__image">
-            <img src="./images/sami-removebg - Copy2.png" alt="">
-            <div class="icons">
-                <img src="./images/react.svg" alt="">
-                <img src="./images/js.svg" alt="">
-                <img src="./images/sass.svg" alt="">
-                <img src="./images/html5.svg" alt="">
-                <img src="./images/css3.svg" alt="">
+        <div class="hero__area">
+
+            <div class="hero__info">
+                <h1>Hi, There</h1>
+                <p>Nice To See you Here</p>
+                <button data-target-form=".contact">Need A New website ?</button>
+                <a href="./pages/protfolio.html"><button>See Recent Projects?</button></a>
+            </div>
+            <div class="hero__image">
+                <img src="./images/sami-removebg - Copy2.png" alt="">
+                <div class="icons">
+                    <img src="./images/react.svg" alt="">
+                    <img src="./images/js.svg" alt="">
+                    <img src="./images/sass.svg" alt="">
+                    <img src="./images/html5.svg" alt="">
+                    <img src="./images/css3.svg" alt="">
+                </div>
             </div>
         </div>
         <div class="contact">
@@ -63,7 +69,6 @@
                     </a>
                 </div>
             </div>
-            
         </div>
         <div class="contact__overlay"></div>
     </main>
