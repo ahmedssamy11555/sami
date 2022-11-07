@@ -1,7 +1,6 @@
 const formBtns = document.querySelectorAll("[data-target-form]")
 const contactOverlay = document.querySelector(".contact__overlay")
 const closeBtns = document.querySelectorAll("[data-close-btn]")
-console.log(closeBtns)
 
 formBtns.forEach(button => {
     button.addEventListener('click', () => {
@@ -46,4 +45,11 @@ function closeFrom(targetFrom){
     contactOverlay.classList.remove("active")
     
 }
+
+let pages = document.querySelectorAll("nav a");
+pages.forEach(page => {
+    if (page.href === window.location.href){
+        page.setAttribute("aria-current", "page")
+    }
+})
 

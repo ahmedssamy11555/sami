@@ -95,7 +95,7 @@
 }
 
 .hero {
-    max-height: calc(100vh);
+    min-height: calc(100vh - 82px);
     max-width: 100%;
     padding: 0  0 0 200px;
     @include breakpoint-down(large){

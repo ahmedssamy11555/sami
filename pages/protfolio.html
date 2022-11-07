@@ -16,11 +16,16 @@
                 <span>Sami</span>
             </a>
         </div>
-        <nav>
+        <div class="contact__overlay"></div>
+        <nav class="navbar">
+            <div class="hide-desktop">
+                <button data-close-btn>&times;</button>
+            </div>
             <a href="/">Home</a>
             <a href="/pages/about.html">About</a>
-            <a href="#">Portfolio</a>
+            <a href="./protfolio.html">Portfolio</a>
         </nav>
+        <img data-close-btn data-target-form=".navbar" class="hide-desktop" src="../images/icon-hamburger.svg" alt="">
     </header>
     <main class="projects container ">
         <h1 class="container"> Recent work</h1>
@@ -62,5 +67,6 @@
             </div>
         </div>
     </main>
+    <script src="../app/script.js"></script>
 </body>
 </html>
